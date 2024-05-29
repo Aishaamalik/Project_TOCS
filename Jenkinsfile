@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'gcloud compute zones list'
-                sh 'gcloud compute scp /var/lib/jenkins/workspace/aries_main/index.html root@apache-server:/var/www/html --zone=us-west4-b'
+                sh 'gcloud compute scp /var/lib/jenkins/workspace/aries_main/*.html root@apache-server:/var/www/html --zone=us-west4-b'
             }
         }
     }
